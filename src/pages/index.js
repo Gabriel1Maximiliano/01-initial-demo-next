@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,16 +20,23 @@ export default function Home() {
         <p className={inter.className}>
               Find in-depth information about Next.js features and&nbsp;API.
         </p>
-        <a
+        {/* <a
             href="/about"
             className={styles.card}
-            target="_blank"
+            //target="_blank"
             rel="noopener noreferrer"
           >  
             <h2 className={inter.className}>
               Ir al about <span>-&gt;</span>
             </h2>
-          </a>
+          </a> */}
+          <h2 className={inter.className}>
+              Ir al about <span>-&gt;</span>
+              <Link href='/about' >
+              About
+              </Link>
+            </h2>
+
        
         
 
